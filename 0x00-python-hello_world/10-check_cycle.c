@@ -1,27 +1,23 @@
 #include "lists.h"
-
 /**
- * check_cycle - checks if a linked list contains a cycle
- * @list: linked list to check
- * Return: 1 if the list has a cycle, 0 if it doesn't
+ * check_cycle - checks if a singly linked list has a cycle in it
+ * @list: pointer to start of linked list
+ * desc: this function says if a list is a circle
+ * Return: 0 in fail 1 in true
  */
-
 int check_cycle(listint_t *list)
 {
-	listint_t *slow = list;
-	listint_t *fast = list;
+	listint_t *tortoise = list;
+	listint_t *hare = list;
 
-	if (!list)
+	if (list == NULL)
 		return (0);
-
-	while (slow && fast && fast->next)
+	while (tortoise != NULL && hare != NULL && hare->next != NULL)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
-
-		if (slow == fast)
+		tortoise = tortoise->next;
+		hare = hare->next->next;
+		if (tortoise == hare)
 			return (1);
 	}
-
 	return (0);
-    
+}
