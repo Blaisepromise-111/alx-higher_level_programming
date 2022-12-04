@@ -4,4 +4,3 @@ for i in range(97, 123):
         continue
     else:
         print("{:c}".format(i), end="")
-        
