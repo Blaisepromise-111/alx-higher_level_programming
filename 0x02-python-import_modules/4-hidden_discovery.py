@@ -5,4 +5,3 @@ if __name__ == "__main__":
         if name.startswith("__"):
             continue
         print("{:s}".format(name))
-        
