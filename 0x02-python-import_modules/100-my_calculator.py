@@ -15,4 +15,3 @@ if __name__ == '__main__':
     b = int(args[3])
     c = operators[args[2]](a, b)
     print("{:d} {:s} {:d} = {:d}".format(a, operator, b, c))
-    
