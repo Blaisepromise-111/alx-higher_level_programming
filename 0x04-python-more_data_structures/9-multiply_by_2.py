@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-def simple_delete(a_dictionary, key=""):
-    a_dictionary.pop(key, None)
-    return a_dictionary
+def multiply_by_2(a_dictionary):
+    return {x: i * 2 for x, i in a_dictionary.items()}
